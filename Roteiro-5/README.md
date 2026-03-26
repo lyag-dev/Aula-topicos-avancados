@@ -1,0 +1,1 @@
+criando uma aplicação com flask e classes
