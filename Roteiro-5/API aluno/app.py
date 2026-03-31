@@ -24,3 +24,12 @@ def listar_alunos():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+from flask import request
+
+@app.route("/alunos", methods=["POST"])
+def adicionar_aluno():
+    dados = request.get_json()
+    novo_aluno = Aluno(dados["nome"], dados["idade"])
+    alunos.append(novo_aluno)
+    return jsonify(novo_aluno.to_dict()), 201
