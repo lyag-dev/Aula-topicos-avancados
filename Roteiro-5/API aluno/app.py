@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 alunos = []
 
-aluno1 = Aluno("João", 17)
+aluno1 = Aluno("Joao", 17)
 aluno1.adicionar_nota(6)
 aluno1.adicionar_nota(7)
 aluno1.adicionar_nota(8)
@@ -15,8 +15,14 @@ aluno2.adicionar_nota(5)
 aluno2.adicionar_nota(6)
 aluno2.adicionar_nota(7)
 
+aluno3 = Aluno("Caua", 17)
+aluno3.adicionar_nota(10)
+aluno3.adicionar_nota(10)
+aluno3.adicionar_nota(10)
+
 alunos.append(aluno1)
 alunos.append(aluno2)
+alunos.append(aluno3)
 
 @app.route("/alunos", methods=["GET"])
 def listar_alunos():
