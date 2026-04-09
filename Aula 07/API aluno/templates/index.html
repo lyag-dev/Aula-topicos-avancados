@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Veículos</title>
+</head>
+
+<body>
+
+<h1>Cadastro de Veículos</h1>
+
+<form method="POST" action="/veiculo">
+    Marca:
+    <input type="text" name="Marca" required>
+
+    Modelo:
+    <input type="text" name="Modelo" required>
+
+    Placa:
+    <input type="text" name="Placa">
+
+    Ano:
+    <input type="ano" name="Ano">
+
+    Preço:
+    <input type="number" name="Preço">
+
+    <button type="submit">Cadastrar</button>
+</form>
+
+<hr>
+
+<h2>Lista de Veículos</h2>
+
+<ul>
+    {% for veiculo in veiculos %}
+    <li>
+        {{ Veiculo.marca }} - {{ Veiculo.modelo }}
+        [<a href="/editar/{{ Veiculo.id }}">Editar</a>]
+        [<a href="/remover/{{ Veiculo.id }}" onclick="return confirm('Tem certeza que deseja remover este veículo?')">Remover</a>]
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
