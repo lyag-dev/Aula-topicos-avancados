@@ -21,8 +21,8 @@ def adicionar_veiculo():
     marca = request.form["Marca"]
     modelo = (request.form["Modelo"])
     placa = (request.form["Placa"])
-    ano = (request.form["Ano"])
-    preco = (request.form["Preço"])
+    ano = int((request.form["Ano"]))
+    preco = int((request.form["Preço"]))
 
     novo_veiculo = Veiculo(marca, modelo, placa, ano, preco)
     veiculos.append(novo_veiculo)
