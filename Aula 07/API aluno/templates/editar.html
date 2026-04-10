@@ -6,14 +6,23 @@
     <title>editar</title>
 </head>
 <body>
-    <form method="POST" action="/atualizar/{{ aluno.id }}">
-        Nome:
-        <input type="text" name="nome" value="{{ aluno.nome }}">
+    <form>
+        Marca:
+        <input type="text" name="Marca" required>
 
-        Idade:
-        <input type="number" name="idade" value="{{ aluno.idade }}">
+        Modelo:
+        <input type="text" name="Modelo" required>
 
-        <button type="submit">Atualizar</button>
+        Placa:
+        <input type="text" name="Placa">
+
+        Ano:
+        <input type="ano" name="Ano">
+
+        Preço:
+        <input type="number" name="Preço">
+
+        <button type="submit">atualizar</button>
     </form>
 </body>
 </html>
