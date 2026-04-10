@@ -35,8 +35,8 @@
     {% for veiculo in veiculos %}
     <li>
         {{ veiculo.marca }} - {{ veiculo.modelo }}
-        [<a href="/editar/{{ Veiculo.id }}">Editar</a>]
-        [<a href="/remover/{{ Veiculo.id }}" onclick="return confirm('Tem certeza que deseja remover este veículo?')">Remover</a>]
+        [<a href="/editar/{{ veiculo.id }}">Editar</a>]
+        [<a href="/remover/{{ veiculo.id }}" onclick="return confirm('Tem certeza que deseja remover este veículo?')">Remover</a>]
     </li>
     {% endfor %}
 </ul>

@@ -32,13 +32,13 @@ def adicionar_veiculo():
 @app.route("/remover/<int:id>")
 def remover_aluno(id):
     global veiculos
-    veiculo = [veiculo for veiculo in veiculos if veiculo.id != id]
+    veiculos = [veiculo for veiculo in veiculos if veiculo.id != id]
     return redirect("/")
 
 # Rota para carregar os dados de um veiculo
 @app.route("/editar/<int:id>")
 def editar_veiculo(id):
-    veiculo = next((veiculo for veiculo in veiculos if veiculo.id == id), None)
+    veiculos = next((veiculo for veiculo in veiculos if veiculo.id == id), None)
     if veiculo:
         return render_template("editar.html", veiculo=veiculo)
     return redirect("/")
