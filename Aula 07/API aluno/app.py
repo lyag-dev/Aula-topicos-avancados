@@ -38,7 +38,7 @@ def remover_aluno(id):
 # Rota para carregar os dados de um veiculo
 @app.route("/editar/<int:id>")
 def editar_veiculo(id):
-    veiculos = next((veiculo for veiculo in veiculos if veiculo.id == id), None)
+    veiculo = next((veiculo for veiculo in veiculos if veiculo.id == id), None)
     if veiculo:
         return render_template("editar.html", veiculo=veiculo)
     return redirect("/")
@@ -53,7 +53,7 @@ def atualizar_veiculo(id):
         placa = (request.form["Placa"])
         ano = int((request.form["Ano"]))
         preco = int((request.form["Preço"]))
-        return redirect("/")
+    return redirect("/")
 
 if __name__ == "__main__":
     app.run(debug=True)
