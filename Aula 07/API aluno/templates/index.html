@@ -16,15 +16,15 @@
     <input type="text" name="Modelo" required>
 
     Placa:
-    <input type="text" name="Placa">
+    <input type="text" name="Placa" required>
 
     Ano:
-    <input type="number" name="Ano">
+    <input type="number" name="Ano" required>
 
     Preço:
-    <input type="number" name="Preço">
+    <input type="number" name="Preço" required>
 
-    <button type="submit">Cadastrar</button>
+    <button type="submit">Cadastrar</button required>
 </form>
 
 <hr>
@@ -34,7 +34,7 @@
 <ul>
     {% for veiculo in veiculos %}
     <li>
-        {{ veiculo.marca }} - {{ veiculo.modelo }}
+        Marca:{{ veiculo.marca }} - Modelo:{{ veiculo.modelo }} - PLaca:{{veiculo.placa}} - Ano:{{veiculo.ano}} - Preço{{veiculo.preco}}
         [<a href="/editar/{{ veiculo.id }}">Editar</a>]
         [<a href="/remover/{{ veiculo.id }}" onclick="return confirm('Tem certeza que deseja remover este veículo?')">Remover</a>]
     </li>

@@ -48,11 +48,11 @@ def editar_veiculo(id):
 def atualizar_veiculo(id):
     veiculo = next((veiculo for veiculo in veiculos if veiculo.id == id), None)
     if veiculo:
-        marca = request.form["Marca"]
-        modelo = (request.form["Modelo"])
-        placa = (request.form["Placa"])
-        ano = int((request.form["Ano"]))
-        preco = int((request.form["Preço"]))
+        veiculo.marca = request.form["Marca"]
+        veiculo.modelo = request.form["Modelo"]
+        veiculo.placa = request.form["Placa"]
+        veiculo.ano = int(request.form["Ano"])
+        veiculo.preco = int(request.form["Preço"])
     return redirect("/")
 
 if __name__ == "__main__":
