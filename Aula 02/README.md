@@ -1,1 +1,1 @@
-Diferença de programação orientada a objetos e procedural
+Diferença de programação orientada a objetos e procedural.

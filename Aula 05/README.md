@@ -1,1 +1,1 @@
-criando uma aplicação com flask e classes
+criando uma aplicação com flask e classes.

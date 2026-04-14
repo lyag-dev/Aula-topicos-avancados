@@ -1,1 +1,1 @@
-funciona.
+Não funciona.

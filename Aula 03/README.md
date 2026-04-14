@@ -1,1 +1,1 @@
-Instalando pip e flask
+Instalando pip e flask.

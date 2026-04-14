@@ -1,2 +1,1 @@
-# Cassino gambling
-Uma api onde você pode apostar!!
+# API para cadastro de veículos.
