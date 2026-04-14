@@ -34,7 +34,7 @@
 <ul>
     {% for veiculo in veiculos %}
     <li>
-        Marca:{{ veiculo.marca }} - Modelo:{{ veiculo.modelo }} - PLaca:{{veiculo.placa}} - Ano:{{veiculo.ano}} - Preço{{veiculo.preco}}
+        Marca: {{ veiculo.marca }} - Modelo: {{ veiculo.modelo }} - PLaca: {{veiculo.placa}} - Ano: {{veiculo.ano}} - Preço: {{veiculo.preco}}
         [<a href="/editar/{{ veiculo.id }}">Editar</a>]
         [<a href="/remover/{{ veiculo.id }}" onclick="return confirm('Tem certeza que deseja remover este veículo?')">Remover</a>]
     </li>

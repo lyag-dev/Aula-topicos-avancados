@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 veiculos = []
 
-veiculo_1 = Veiculo("Fiat", "uno", "123abc", 2003, 19000)
+veiculo_1 = Veiculo("Fiat", "Uno", "BSC2J47", 2003, 19000)
 veiculos.append(veiculo_1)
 
 @app.route("/", methods=["GET"])
