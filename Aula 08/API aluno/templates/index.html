@@ -44,7 +44,8 @@
             li.innerHTML = `
                 <span><strong>${aluno.nome}</strong>
                     (${aluno.idade} anos)</span>
-                <button onclick="deletarAluno(${aluno.id})">
+                <button class="btn-deletar"
+                        onclick="deletarAluno(${aluno.id})">
                     Deletar
                 </button>
             `;
