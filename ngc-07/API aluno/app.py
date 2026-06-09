@@ -26,6 +26,7 @@ def pagina_inicial():
 # ==========================================
 # 2. ROTAS DE API (Endpoints JSON)
 # ==========================================
+
 # ROTA A: Listar Alunos (GET)
 @app.route("/api/alunos", methods=["GET"])
 def listar_alunos():
