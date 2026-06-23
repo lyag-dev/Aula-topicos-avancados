@@ -10,7 +10,8 @@
     <h1>Controle de Alunos</h1>
     <form id="formulario-cadastro">
         <input type="text" id="nome" placeholder="Nome do aluno" required>
-        <input type="number" id="idade" placeholder="Idade do aluno" required>
+        <input type="number" id="idade" 
+            placeholder="Idade do aluno" required>
         <button type="submit">Cadastrar via API</button>
     </form>
     <hr>
@@ -31,21 +32,27 @@
                     alunos.forEach(aluno => desenharAlunoNaTela(aluno));
                 });
         }
+
         function desenharAlunoNaTela(aluno) {
             const li = document.createElement('li');
             li.id = `aluno-${aluno.id}`;
             li.innerHTML = `
-                <span><strong>${aluno.nome}</strong> (${aluno.idade} anos);
-                    - Média: ${aluno.media} [${aluno.aprovado ? 'Aprovado' : 'Reprovado'
-                <button class="btn-deletar" onclick="deletarAluno(${aluno.id})">Deletar
+                <span><strong>${aluno.nome}</strong> (${aluno.idade} anos)
+                    - Média: ${aluno.media}
+                    [${aluno.aprovado ? 'Aprovado' : 'Reprovado'}]</span>
+                <button class="btn-deletar"
+                    onclick="deletarAluno(${aluno.id})">Deletar</button>
             `;
             listaAlunos.appendChild(li);
         }
-
         formulario.addEventListener('submit', function (event) {
             event.preventDefault();
-            const dados = { nome: inputNome.value, idade: parseInt(inputIdade.value),
-            
+            const dados = {
+                nome: inputNome.value,
+                idade: parseInt(inputIdade.value),
+                media: 8.5
+            };
+
             fetch(API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
